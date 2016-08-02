@@ -1,0 +1,18 @@
+module: profile
+runtime: custom
+api_version: 1
+threadsafe: false
+vm: true
+
+resources:
+  cpu: 1
+  memory_gb: 1.5
+
+manual_scaling:
+  instances: 1
+
+network:
+  forwarded_ports: ["50051"]
+
+health_check:
+  enable_health_check: false
